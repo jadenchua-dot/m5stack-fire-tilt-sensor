@@ -1,12 +1,39 @@
-# M5Stack Fire Tilt Sensor
+# M5Stack Fire Tilt Sensor: Equipment Levelling Monitor
 
-A tilt alarm built on the **M5Stack Fire** (ESP32 + MPU6886 IMU). It measures how far the device is tilted from a "level" position you set. If it tilts too far, it:
+A tilt alarm built on the **M5Stack Fire** (ESP32 + MPU6886 IMU) that keeps watch over equipment that has to stay level. It measures how far the equipment has tilted from a "level" position you set. If it tilts too far, it:
 
 - turns the screen and the side LED bars **red**, and beeps,
 - sends a **push notification to your phone** (via [ntfy.sh](https://ntfy.sh)),
 - shows the alarm on a **live web dashboard** served by the device over Wi‑Fi.
 
 When it's back within the limit, everything goes **green** again.
+
+## Problem
+
+A lot of equipment only works properly, or safely, when it is level:
+
+- a **3D printer** knocked off level prints warped, failed parts,
+- a **camera tripod** or surveying instrument that shifts ruins the shot or the measurement,
+- a **machine on a workbench** (a drill press, a scale, a lab instrument) that leans gives wrong results and can tip over.
+
+The problem is that nobody notices. A bump, a soft floor or a loose leg moves it a few degrees, and the owner only finds out when the job has already failed, or when something falls. Checking with a spirit level only tells you it was level at the moment you looked.
+
+**How might we** watch an item's level continuously and alert the owner the moment it drifts, even when they're not in the room?
+
+## Solution
+
+Mount the M5Stack Fire on the equipment, set it level once, and leave it:
+
+| Need | How this project meets it |
+|---|---|
+| Know what "level" means for *this* setup | Press **ZERO** in the correct position. Tilt is then measured from there, whichever way the device is mounted. |
+| Catch drift early, before it matters | An amber **CAREFUL** warning appears at 70% of the limit, before the alarm. |
+| Get alerted on the spot | The screen and LED bars turn **red** and the Fire **beeps** once the tilt passes the limit for 0.5 s. |
+| Get alerted when you're away | A **push notification** goes to your phone ("Tilt alarm!", then "Tilt OK again"). |
+| Check and adjust remotely | The **web dashboard** shows the live angle, lets you change the limit, mute the beeper, re-zero, and see a log of tilt events. |
+| Avoid false alarms | The 0.5 s delay and 1.5° hysteresis ignore brief bumps and stop flickering at the limit. |
+
+Different equipment needs different tolerances, so the limit can be set anywhere from 1° to 60°: tight for a printer bed, loose for a cart.
 
 ## 🎥 Demo videos
 
