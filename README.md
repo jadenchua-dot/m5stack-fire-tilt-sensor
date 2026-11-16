@@ -8,7 +8,11 @@ A tilt alarm built on the **M5Stack Fire** (ESP32 + MPU6886 IMU). It measures ho
 
 When it's back within the limit, everything goes **green** again.
 
-> 🎥 **Demo video:** _coming soon_
+## 🎥 Demo video
+
+[![Watch the demo on YouTube](https://img.youtube.com/vi/oyhKpcI64IE/hqdefault.jpg)](https://youtube.com/shorts/oyhKpcI64IE)
+
+▶️ **[Watch the demo on YouTube](https://youtube.com/shorts/oyhKpcI64IE)**
 
 ---
 
@@ -137,4 +141,4 @@ After pressing ZERO while holding it upright, lying flat read about 70°. That's
 - [x] Web dashboard + phone push notifications
 - [x] Auto-rotating screen
 - [x] Stable readings (accelerometer-only filter)
-- [ ] Demo video
+- [x] [Demo video](https://youtube.com/shorts/oyhKpcI64IE)
