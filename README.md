@@ -12,8 +12,8 @@ When it's back within the limit, everything goes **green** again.
 
 | 1. Main demo | 2. Limit + web dashboard controls |
 |---|---|
-| [![Main demo](https://img.youtube.com/vi/oyhKpcI64IE/hqdefault.jpg)](https://youtube.com/shorts/oyhKpcI64IE) | [![Limit and dashboard demo](https://img.youtube.com/vi/x5wJCI2qH80/hqdefault.jpg)](https://youtu.be/x5wJCI2qH80) |
-| The tilt sensor in action. ▶️ **[Watch](https://youtube.com/shorts/oyhKpcI64IE)** | Testing the alarm limit, and using the website to mute the beeper, set the tilt limit, and reset the level (zero) position. ▶️ **[Watch](https://youtu.be/x5wJCI2qH80)** |
+| [![Main demo](https://img.youtube.com/vi/oyhKpcI64IE/hqdefault.jpg)](https://youtube.com/shorts/oyhKpcI64IE) | [![Limit and dashboard demo](https://img.youtube.com/vi/2QPIpD7vjOg/hqdefault.jpg)](https://youtube.com/shorts/2QPIpD7vjOg) |
+| The tilt sensor in action. ▶️ **[Watch](https://youtube.com/shorts/oyhKpcI64IE)** | Testing the alarm limit, and using the website to mute the beeper, set the tilt limit, and reset the level (zero) position, with the website updating in real time. ▶️ **[Watch](https://youtube.com/shorts/2QPIpD7vjOg)** |
 
 ---
 
@@ -142,4 +142,4 @@ After pressing ZERO while holding it upright, lying flat read about 70°. That's
 - [x] Web dashboard + phone push notifications
 - [x] Auto-rotating screen
 - [x] Stable readings (accelerometer-only filter)
-- [x] Demo videos: [main demo](https://youtube.com/shorts/oyhKpcI64IE), [limit + web dashboard controls](https://youtu.be/x5wJCI2qH80)
+- [x] Demo videos: [main demo](https://youtube.com/shorts/oyhKpcI64IE), [limit + web dashboard controls](https://youtube.com/shorts/2QPIpD7vjOg)
