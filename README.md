@@ -1,5 +1,7 @@
 # M5Stack Fire Tilt Sensor: Equipment Levelling Monitor
 
+[![Build firmware](https://github.com/jadenchua-dot/m5stack-fire-tilt-sensor/actions/workflows/build.yml/badge.svg)](https://github.com/jadenchua-dot/m5stack-fire-tilt-sensor/actions/workflows/build.yml)
+
 A tilt alarm built on the **M5Stack Fire** (ESP32 + MPU6886 IMU) that keeps watch over equipment that has to stay level. It measures how far the equipment has tilted from a "level" position you set. If it tilts too far, it:
 
 - turns the screen and the side LED bars **red**, and beeps,
