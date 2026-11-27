@@ -10,6 +10,8 @@ A tilt alarm built on the **M5Stack Fire** (ESP32 + MPU6886 IMU) that keeps watc
 
 When it's back within the limit, everything goes **green** again.
 
+**▶ Try the web dashboard in your browser:** [jaden-portfolio-psi.vercel.app/demos/tilt](https://jaden-portfolio-psi.vercel.app/demos/tilt/) (the device's own page, running on a simulated sensor: drag to tilt it, bump it, set the limit)
+
 ## Problem
 
 A lot of equipment only works properly, or safely, when it is level:
