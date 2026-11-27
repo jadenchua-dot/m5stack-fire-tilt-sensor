@@ -1,0 +1,45 @@
+# Builds the firmware on every push and pull request, so a change that breaks
+# the build is caught before it reaches the device. The compiled firmware is
+# kept as a downloadable artifact (build it yourself to flash your own Wi-Fi
+# details: they live in include/secrets.h, which is never committed).
+name: Build firmware
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["**.md", "docs/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache PlatformIO
+        uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: pio-${{ runner.os }}-${{ hashFiles('platformio.ini') }}
+
+      - name: Install PlatformIO
+        run: pip install --upgrade platformio
+
+      - name: Use example secrets for CI
+        run: cp include/secrets.example.h include/secrets.h
+
+      - name: Build
+        run: pio run -e m5stack-fire
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: .pio/build/m5stack-fire/firmware.bin
